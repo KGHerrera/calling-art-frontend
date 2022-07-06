@@ -1,0 +1,23 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/calling-art-frontend/node_modules
+/calling-art-frontend/.pnp
+/calling-art-frontend/.pnp.js
+
+# testing
+/calling-art-frontend/coverage
+
+# production
+/calling-art-frontend/build
+
+# misc
+/calling-art-frontend/.DS_Store
+/calling-art-frontend/.env.local
+/calling-art-frontend/.env.development.local
+/calling-art-frontend/.env.test.local
+/calling-art-frontend/.env.production.local
+
+/calling-art-frontend/npm-debug.log*
+/calling-art-frontend/yarn-debug.log*
+/calling-art-frontend/yarn-error.log*
