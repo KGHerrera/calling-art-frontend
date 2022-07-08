@@ -1,0 +1,29 @@
+.footer-conteiner{
+    width: 100%;
+    height: 80px;
+    background-color: #111826;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-size: 16px;
+    bottom: 0;
+    left: 0;
+    position: relative;
+}
+
+.follow-conteiner{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.follow-icon{
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.contact-us-conteiner{
+    margin-right: 20px;
+}

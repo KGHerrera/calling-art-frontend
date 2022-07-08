@@ -5,10 +5,12 @@
     align-items: center;
     background-color: #111826;
     color: white;
-    height: 80px;
+    height: 70px;
     width: 100%;
     font-size: 16px;
     box-shadow: 0 0 10px #06080c10;
+    position: fixed;
+    top: 0;
 }
 
 .circle-logo{
