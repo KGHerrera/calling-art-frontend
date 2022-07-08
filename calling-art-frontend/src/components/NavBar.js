@@ -1,4 +1,4 @@
-import '../styles/NavBar.css'
+import '../styles/NavBar.css';
 
 export default function NavBar( props ){
     return (
@@ -10,7 +10,6 @@ export default function NavBar( props ){
             <div className="search-conteiner">
                 <form className="search-form">
                     <input type="text" className='search-textfield' placeholder='search'/>
-                    <button className='search-button'></button>
                 </form>
             </div>
             <div className="start-conteiner">
