@@ -17,11 +17,13 @@
     flex-direction: row;
     align-items: center;
     margin-left: 20px;
+    justify-content: center;
 }
 
 .follow-icon{
     font-size: 20px;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 .contact-us-conteiner{
