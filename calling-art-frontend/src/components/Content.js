@@ -6,6 +6,9 @@ export default function Content(props) {
       <div className="image-conteiner"></div>
       <div className="image-conteiner"></div>
       <div className="image-conteiner"></div>
+      <div className="image-conteiner"></div>
+      <div className="image-conteiner"></div>
+      <div className="image-conteiner"></div>
     </div>
   );
 }

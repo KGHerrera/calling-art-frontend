@@ -21,7 +21,7 @@ export default function NavBar(props) {
           Login
         </a>
         <a className="start-button" href="#">
-          Sing up
+          Sing-up
         </a>
       </div>
     </div>

@@ -1,7 +1,9 @@
+import '../styles/Category.css'
+
 export default function Category() {
   return (
     <div className="category-conteiner">
-      <div className="category-title"></div>
+      <div className="category-title">Select category</div>
       <div className="category-button-conteiner">
         <button className="upload-image-button">upload image</button>
         <button className="category-button">anime</button>
