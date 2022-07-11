@@ -23,11 +23,12 @@
     height: 40px;
     border-radius: 30px;
     padding: 0 20px;
-    color:white;
+    color:#aec5f5;
     font-size: 16px;
     margin: 10px 10px;
     cursor: pointer;
     transition: all .3s;
+    border: 1px solid #b1c8f7;
 }
 
 .upload-image-button:hover{

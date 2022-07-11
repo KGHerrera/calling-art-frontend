@@ -24,6 +24,7 @@ export default function NavBar(props) {
           Sing-up
         </a>
       </div>
+      
     </div>
   );
 }

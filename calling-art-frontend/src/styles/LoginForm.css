@@ -15,7 +15,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    box-shadow: 0 0 20px #06080c77;
+    box-shadow: 0 0 30px #06080c18;
 }
 
 .form {
@@ -46,11 +46,11 @@
 
 .button-form {
     background-color: #1f283a;
-    border: 1px solid #617cb1;
+    border: 1px solid #aec5f5;
     height: 40px;
     border-radius: 30px;
     padding: 0 40px;
-    color: white;
+    color: #aec5f5;
     font-size: 16px;
     margin: 20px;
     cursor: pointer;

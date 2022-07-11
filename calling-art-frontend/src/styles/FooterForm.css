@@ -1,0 +1,27 @@
+.footer-form-conteiner {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.home-footer {
+    color: white;
+    text-decoration: none;
+    font-size: 50px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.message-footer {
+    margin-right: 20px;
+    margin-bottom: 10px;
+}

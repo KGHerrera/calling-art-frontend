@@ -1,5 +1,6 @@
 import { FiUser } from "react-icons/fi";
 import "../styles/LoginForm.css";
+import FooterForm from "./FooterForm";
 
 export default function LoginForm() {
   return (
@@ -19,6 +20,8 @@ export default function LoginForm() {
           <input type="submit" value="login" className="button-form"/>
         </form>
       </div>
+
+      <FooterForm url={'#'} message={"don't you have an account?, sign up"}/>
     </div>
   );
 }
