@@ -3,15 +3,12 @@ import Footer from "./components/Footer.js";
 import Content from "./components/Content.js";
 import Category from "./components/Category.js";
 import "./styles/ScrollBar.css";
-import "./App.css";
+import LoginForm from "./components/LoginForm.js";
 
 function App() {
   return (
     <>
-      <NavBar />
-      <Category />
-      <Content />
-      <Footer />
+      <LoginForm/>
     </>
   );
 }

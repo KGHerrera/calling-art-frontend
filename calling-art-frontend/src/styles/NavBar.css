@@ -9,7 +9,7 @@
     width: 100%;
     font-size: 16px;
     box-shadow: 0 0 20px #06080c77;
-    position: fixed;
+    position: sticky;
     top: 0;
 }
 
