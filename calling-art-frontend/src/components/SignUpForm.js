@@ -10,7 +10,13 @@ export default function SignUpForm() {
           <input type="text" placeholder="username" className="input-form" />
           <input type="text" placeholder="e-mail" className="input-form" />
           <input type="text" placeholder="url-icon" className="input-form" />
-          <input type="text" placeholder="description" className="input-form" />
+          <textarea
+            name="textarea"
+            rows="3"
+            cols="20"
+            className="textarea-form"
+            placeholder="description"
+          />
           <input
             type="password"
             placeholder="password"
@@ -22,7 +28,7 @@ export default function SignUpForm() {
             className="input-form"
           />
 
-          <input type="submit" value="sing up" className="button-form" />
+          <input type="submit" value="sign up" className="button-form" />
         </form>
       </div>
 

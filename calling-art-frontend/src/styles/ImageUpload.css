@@ -1,4 +1,4 @@
-.form-conteiner {
+.image-upload-conteiner {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -6,16 +6,17 @@
     height: 100vh;
 }
 
-.login-conteiner {
+.form-conteiner {
     background-color: #111826;
-    width: 500px;
-    height: 500px;
+    width: 900px;
+    height: 550px;
     border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
     box-shadow: 0 0 30px #06080c18;
+    color: white;
 }
 
 .form {
@@ -31,16 +32,16 @@
     text-align: center;
 }
 
-.input-form {
+.input-form,
+.select-form {
     margin-left: 20px;
     border: none;
-    width: 250px;
+    width: 300px;
     height: 40px;
     border-radius: 20px;
     outline: none;
     font-size: 18px;
     padding-left: 20px;
-    padding-right: 20px;
     color: #525252;
     margin: 20px;
 }
@@ -62,8 +63,34 @@
     background-color: #2f3c57;
 }
 
-.icon-login{
-    width: 100px;
-    height: auto;
-    color: white;
+.preview-conteiner {
+    height: 100%;
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.preview-title {
+    margin-bottom: 40px;
+}
+
+.image-preview {
+    height: 250px;
+    width: 400px;
+    border-radius: 20px;
+    background-color: #1f283a;
+}
+
+.textarea-form {
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    padding: 20px;
+    resize: none;
+    width: 300px;
+    margin: 20px;
+    font-size: 18px;
+    color: #525252;
 }
