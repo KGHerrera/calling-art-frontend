@@ -1,0 +1,40 @@
+.user-conteiner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+
+.user-square {
+    width: 100%;
+    height: 180px;
+    top: 0;
+    z-index: -1;
+    position: absolute;
+    background-color: #111826;
+}
+
+.user-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 125px;
+    background-color: white;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.user-name {
+    margin: 20px;
+}
+
+.user-description {
+    margin: 20px;
+    width: 50%;
+    text-align: center;
+}
+
+.user-images {
+    margin-top: 20px;
+}

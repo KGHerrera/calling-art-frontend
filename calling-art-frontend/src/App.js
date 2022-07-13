@@ -1,10 +1,11 @@
-import SignUpForm from './components/SignUpForm.js';
+import Content from './components/Content.js'
+
 import "./styles/ScrollBar.css";
 
 function App() {
   return (
     <>
-      <SignUpForm></SignUpForm>
+      
     </>
   );
 }
