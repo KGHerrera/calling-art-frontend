@@ -4,12 +4,12 @@ import Content from "./components/Content.js";
 import NavBar from "./components/NavBar.js";
 
 import "./styles/ScrollBar.css";
-import User from "./pages/User.js";
+import Image from "./pages/Image.js";
 
 function App() {
   return (
     <>
-      <User/>
+      <Image/>
     </>
   );
 }
