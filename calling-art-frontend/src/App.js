@@ -4,12 +4,12 @@ import Content from "./components/Content.js";
 import NavBar from "./components/NavBar.js";
 
 import "./styles/ScrollBar.css";
-import Home from "./pages/Home.js";
+import User from "./pages/User.js";
 
 function App() {
   return (
     <>
-      <Home/>
+      <User/>
     </>
   );
 }

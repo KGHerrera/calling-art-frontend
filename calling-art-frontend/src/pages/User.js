@@ -1,14 +1,14 @@
 import React from "react";
 import Content from "../components/Content";
 import Footer from "../components/Footer";
-import NavBar from "../components/NavBar";
+import UserProfile from "../components/UserProfile";
 
-export default function Home() {
+export default function User() {
   return (
     <>
-      <NavBar />
+      <UserProfile />
       <Content />
-      <Footer />
+      <Footer/>
     </>
   );
 }
