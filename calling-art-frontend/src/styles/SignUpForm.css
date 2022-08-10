@@ -10,7 +10,7 @@
     background-color: #111826;
     width: 500px;
     height: 650px;
-    border-radius: 20px;
+    border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,6 +23,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    z-index: 100;
 }
 
 .form-title {
@@ -37,7 +38,7 @@
     width: 300px;
     padding-right: 20px;
     height: 40px;
-    border-radius: 20px;
+    border-radius: 5px;
     outline: none;
     font-size: 18px;
     padding-left: 20px;
@@ -49,7 +50,7 @@
     background-color: #1f283a;
     border: 1px solid #aec5f5;
     height: 40px;
-    border-radius: 30px;
+    border-radius: 5px;
     padding: 0 40px;
     color: #aec5f5;
     font-size: 16px;
@@ -68,19 +69,19 @@
     flex-direction: column;
     background-color: #111826;
     padding: 30px;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
 .image-preview{
     margin: 20px;
     width: 100px;
     height: 100px;
-    border-radius: 50px;
+    border-radius: 100%;
     background-color: white;
 }
 
 .textarea-form {
-    border-radius: 20px;
+    border-radius: 5px;
     border: none;
     outline: none;
     padding: 20px;

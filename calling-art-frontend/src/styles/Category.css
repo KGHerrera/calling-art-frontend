@@ -21,7 +21,7 @@
     background-color: #1f283a;
     border: none;
     height: 40px;
-    border-radius: 30px;
+    border-radius: 5px;
     padding: 0 20px;
     color:#aec5f5;
     font-size: 16px;
@@ -39,7 +39,7 @@
     background-color: #11182600;
     border: solid 1px white;
     height: 40px;
-    border-radius: 30px;
+    border-radius: 5px;
     padding: 0 20px;
     color:white;
     font-size: 16px;

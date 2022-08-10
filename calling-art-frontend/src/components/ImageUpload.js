@@ -4,7 +4,7 @@ import '../styles/ImageUpload.css';
 export default function ImageUpload() {
   return (
     <div className="image-upload-conteiner">
-      <div className="form-conteiner">
+      <div className="upload-conteiner">
         <form className="form">
           <h1 className="form-title">upload your image</h1>
           <input type="text" placeholder="title" className="input-form" />
@@ -16,10 +16,10 @@ export default function ImageUpload() {
 
         <div className="preview-conteiner">
           <h2 className="preview-title">image preview</h2>
-          <div className="image-preview"></div>
+          <div className="image-preview-upload"></div>
         </div>
       </div>
-      <FooterForm />
+      <FooterForm url="/"/>
     </div>
   );
 }

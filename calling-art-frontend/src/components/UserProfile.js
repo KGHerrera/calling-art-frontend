@@ -2,8 +2,8 @@ import '../styles/UserProfile.css'
 
 export default function UserContent(){
     return (
-        <div className="user-conteiner">
-            <div className="user-square"></div>
+        <div className="profile-conteiner">
+            <div className="user-banner"></div>
             <div className="user-image"></div>
             <h1 className="user-name">username</h1>
             <p className="user-description">

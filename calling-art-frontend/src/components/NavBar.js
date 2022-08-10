@@ -1,12 +1,16 @@
 import "../styles/NavBar.css";
+import { Link } from "react-router-dom";
+import { AiOutlineSearch } from "react-icons/ai";
 
 export default function NavBar(props) {
   return (
     <div className="navbar-conteiner">
-      <div className="logo-conteiner">
-        <div className="circle-logo"></div>
-        <p className="image-logo">L O G O</p>
-      </div>
+      <Link to="/">
+        <div className="logo-conteiner">
+          <div className="circle-logo"></div>
+          <p className="image-logo">L O G O</p>
+        </div>
+      </Link>
       <div className="search-conteiner">
         <form className="search-form">
           <input
@@ -14,17 +18,20 @@ export default function NavBar(props) {
             className="search-textfield"
             placeholder="search"
           />
+
+          <button type="submit" className="btn-search">
+            <AiOutlineSearch />
+          </button>
         </form>
       </div>
       <div className="start-conteiner">
-        <a className="start-button" href="#">
+        <Link className="start-button" to="/login">
           Login
-        </a>
-        <a className="start-button" href="#">
+        </Link>
+        <Link className="start-button" to="/signup">
           Sing-up
-        </a>
+        </Link>
       </div>
-      
     </div>
   );
 }

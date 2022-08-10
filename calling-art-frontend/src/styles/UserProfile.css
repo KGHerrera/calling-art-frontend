@@ -1,4 +1,4 @@
-.user-conteiner {
+.profile-conteiner {
     width: 100%;
     display: flex;
     align-items: center;
@@ -7,11 +7,11 @@
     color: white;
 }
 
-.user-square {
+.user-banner {
     width: 100%;
     height: 180px;
     top: 0;
-    z-index: -1;
+    z-index: 1;
     position: absolute;
     background-color: #111826;
 }
@@ -19,10 +19,11 @@
 .user-image {
     width: 250px;
     height: 250px;
-    border-radius: 125px;
+    border-radius: 100%;
     background-color: white;
     margin-top: 50px;
     margin-bottom: 20px;
+    z-index: 2;
 }
 
 .user-name {

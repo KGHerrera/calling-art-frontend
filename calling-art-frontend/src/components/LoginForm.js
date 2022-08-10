@@ -21,7 +21,7 @@ export default function LoginForm() {
         </form>
       </div>
 
-      <FooterForm url={'#'} message={"don't you have an account?, sign up"}/>
+      <FooterForm url={'/signup'} message={"don't you have an account?, sign up"}/>
     </div>
   );
 }
