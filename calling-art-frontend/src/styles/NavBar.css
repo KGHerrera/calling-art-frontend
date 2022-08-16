@@ -28,6 +28,19 @@
     margin-left: 20px;
 }
 
+.logout-button{
+    background-color: #11182600;
+    cursor: pointer;
+    color:white;
+    border: none;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
 .image-logo {
     font-size: 20px;
     margin-left: 20px;
@@ -43,7 +56,7 @@
 .search-textfield {
     margin-left: 20px;
     border: 1px solid #ffffff;
-    width: 450px;
+    width: 350px;
     height: 40px;
     border-radius: 5px 0 0 5px;
     outline: none;
@@ -84,4 +97,26 @@
 
 .start-conteiner a {
     margin-left: 20px;
+}
+
+.nav-user-image{
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 100%;
+}
+
+.nav-user-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-right: 20px;
+}
+
+.nav-username{
+    font-size: 16px;
+    margin-left: 10px;
+    font-family: monospace;
 }

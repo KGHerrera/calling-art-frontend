@@ -22,7 +22,8 @@
     border-radius: 100%;
     background-color: white;
     margin-top: 50px;
-    margin-bottom: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
     z-index: 2;
 }
 

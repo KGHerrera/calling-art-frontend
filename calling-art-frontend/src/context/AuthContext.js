@@ -1,10 +1,12 @@
 import { createContext, useEffect, useState } from "react";
 import jwt_decode from "jwt-decode";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
+  let navigate = useNavigate();
+
   let [authTokens, setAuthTokens] = useState(() =>
     localStorage.getItem("authTokens")
       ? JSON.parse(localStorage.getItem("authTokens"))
@@ -21,8 +23,9 @@ export const AuthProvider = ({ children }) => {
 
   let loginUser = async (e) => {
     e.preventDefault();
+
     let response = await fetch(
-      "https://callingartbackend.herokuapp.com/api/token/",
+      "https://callingartbackend.herokuapp.com/accounts/login/",
       {
         method: "POST",
         headers: {
@@ -34,13 +37,14 @@ export const AuthProvider = ({ children }) => {
         }),
       }
     );
+    
     let data = await response.json();
 
     if (response.status === 200) {
       setAuthTokens(data);
       setUser(jwt_decode(data.access));
       localStorage.setItem("authTokens", JSON.stringify(data));
-      <Navigate to="/" />;
+      navigate("/");
     } else {
       alert("Something went wrong!");
     }
@@ -50,7 +54,7 @@ export const AuthProvider = ({ children }) => {
     setAuthTokens(null);
     setUser(null);
     localStorage.removeItem("authTokens");
-    <Navigate to="/login" />;
+    navigate("/");
   };
 
   let updateToken = async () => {
@@ -68,16 +72,16 @@ export const AuthProvider = ({ children }) => {
     let data = await response.json();
 
     if (response.status === 200) {
-      setAuthTokens(data);
       setUser(jwt_decode(data.access));
       localStorage.setItem("authTokens", JSON.stringify(data));
+      setAuthTokens(data);
+      console.log("updating...");
+    } else if (response.status === 401) {
     } else {
+      console.log("logout...");
       logoutUser();
     }
-
-    if (loading) {
-      setLoading(false);
-    }
+    setLoading(false);
   };
 
   let contextData = {
@@ -99,6 +103,7 @@ export const AuthProvider = ({ children }) => {
         updateToken();
       }
     }, fifteenMinutes);
+
     return () => clearInterval(interval);
   }, [authTokens, loading]);
 

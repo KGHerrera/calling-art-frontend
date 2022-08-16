@@ -1,14 +1,14 @@
 import "../styles/Content.css";
+import ContentImage from "./ContentImage";
 
-export default function Content(props) {
+export default function Content({ data }) {
   return (
     <div className="content-conteiner">
-      <div className="image-conteiner"></div>
-      <div className="image-conteiner"></div>
-      <div className="image-conteiner"></div>
-      <div className="image-conteiner"></div>
-      <div className="image-conteiner"></div>
-      <div className="image-conteiner"></div>
+      {data ? (
+        data.map((image,index) => <ContentImage image={image} key={index}/>)
+      ) : (
+        <p>dont have images</p>
+      )}
     </div>
   );
 }

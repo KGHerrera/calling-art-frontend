@@ -1,4 +1,4 @@
-.form-conteiner {
+.form-conteiner-in {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -7,35 +7,33 @@
     background-color: #0B0F17;;
 }
 
-.login-conteiner {
+.login-conteiner-in {
     background-color: #111826;
-    width: 500px;
-    height: 500px;
     border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     box-shadow: 0 0 30px #06080c18;
+    padding: 40px;
 }
 
-.form {
+.form-in {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-.form-title {
+.form-title-in {
     color: white;
-    margin: 30px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
-.input-form {
-    margin-left: 20px;
+.input-form-in {
     border: none;
-    width: 250px;
+    width: 280px;
     height: 40px;
     border-radius: 5px;
     outline: none;
@@ -43,10 +41,10 @@
     padding-left: 20px;
     padding-right: 20px;
     color: #525252;
-    margin: 20px;
+    margin-bottom: 20px;
 }
 
-.button-form {
+.button-form-in {
     background-color: #1f283a;
     border: 1px solid #aec5f5;
     height: 40px;
@@ -54,17 +52,18 @@
     padding: 0 40px;
     color: #aec5f5;
     font-size: 16px;
-    margin: 20px;
+    margin-top: 20px;
     cursor: pointer;
     transition: all .3s;
 }
 
-.button-form:hover {
+.button-form-in:hover {
     background-color: #2f3c57;
 }
 
-.icon-login{
+.icon-login-in{
     width: 100px;
     height: auto;
     color: white;
+    margin-bottom: 20px;
 }

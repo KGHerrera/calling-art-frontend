@@ -69,14 +69,14 @@ export default function SignUpForm() {
   };
 
   return (
-    <div className="form-conteiner">
-      <div className="sign-conteiner">
-        <form className="form" onSubmit={handleSubmit}>
-          <h1 className="form-title">type your data</h1>
+    <div className="form-conteiner-up">
+      <div className="sign-conteiner-up">
+        <form className="form-up" onSubmit={handleSubmit}>
+          <h1 className="form-title-up">type your data</h1>
           <input
             type="text"
             placeholder="username"
-            className="input-form"
+            className="input-form-up"
             name="username"
             onChange={handleChange}
             value={form.username}
@@ -84,7 +84,7 @@ export default function SignUpForm() {
           <input
             type="text"
             placeholder="e-mail"
-            className="input-form"
+            className="input-form-up"
             name="email"
             onChange={handleChange}
             value={form.email}
@@ -92,7 +92,7 @@ export default function SignUpForm() {
           <input
             type="text"
             placeholder="url-icon"
-            className="input-form"
+            className="input-form-up"
             name="icon"
             onChange={handleChange}
             value={form.icon}
@@ -100,7 +100,7 @@ export default function SignUpForm() {
           <textarea
             rows="3"
             cols="20"
-            className="textarea-form"
+            className="textarea-form-up"
             placeholder="description"
             name="description"
             onChange={handleChange}
@@ -109,7 +109,7 @@ export default function SignUpForm() {
           <input
             type="password"
             placeholder="password"
-            className="input-form"
+            className="input-form-up"
             name="password"
             onChange={handleChange}
             value={form.password}
@@ -117,27 +117,27 @@ export default function SignUpForm() {
           <input
             type="password"
             placeholder="confirm-password"
-            className="input-form"
+            className="input-form-up"
             name="cPassword"
             onChange={handleChangeCPassword}
             value={cPassword}
           />
-          <nav>
-            <input type="submit" value="sign up" className="button-form" />
+          <div className="buttons-up">
+            <input type="submit" value="sign up" className="button-form-up" />
             <input
               type="reset"
               value="reset"
-              className="button-form"
+              className="button-form-up"
               onClick={handleReset}
             />
-          </nav>
+          </div>
         </form>
       </div>
 
-      <div className="user-preview">
-        <h1 className="title-preview">preview</h1>
+      <div className="user-preview-up">
+        <h1 className="title-preview-up">preview</h1>
         <div
-          className="image-preview"
+          className="image-preview-up"
           style={{
             backgroundSize: "cover",
             backgroundPosition: "center",
@@ -145,7 +145,7 @@ export default function SignUpForm() {
             backgroundImage: `url('${form.icon}')`,
           }}
         ></div>
-        <h2 className="username-preview">{form.username}</h2>
+        <h2 className="username-preview-up">{form.username}</h2>
       </div>
 
       <FooterForm url={"/login"} message={"do you have an account?, login"} />

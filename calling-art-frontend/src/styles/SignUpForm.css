@@ -1,4 +1,4 @@
-.form-conteiner {
+.form-conteiner-up {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -6,11 +6,10 @@
     height: 100vh;
 }
 
-.sign-conteiner {
+.sign-conteiner-up {
     background-color: #111826;
-    width: 500px;
-    height: 650px;
     border-radius: 5px;
+    padding: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,7 +17,7 @@
     box-shadow: 0 0 30px #06080c18;
 }
 
-.form {
+.form-up {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,14 +25,13 @@
     z-index: 100;
 }
 
-.form-title {
+.form-title-up {
     color: white;
-    margin: 30px;
+    margin-bottom: 30px;
     text-align: center;
 }
 
-.input-form {
-    margin-left: 20px;
+.input-form-up {
     border: none;
     width: 300px;
     padding-right: 20px;
@@ -43,10 +41,10 @@
     font-size: 18px;
     padding-left: 20px;
     color: #525252;
-    margin: 10px;
+    margin-bottom: 20px;
 }
 
-.button-form {
+.button-form-up {
     background-color: #1f283a;
     border: 1px solid #aec5f5;
     height: 40px;
@@ -54,25 +52,23 @@
     padding: 0 40px;
     color: #aec5f5;
     font-size: 16px;
-    margin: 20px;
     cursor: pointer;
     transition: all .3s;
 }
 
-.user-preview{
+.user-preview-up{
     color: white;
     margin-left: 50px;
     display: flex;
-    width: 250px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     background-color: #111826;
-    padding: 30px;
+    padding: 20px;
     border-radius: 5px;
 }
 
-.image-preview{
+.image-preview-up{
     margin: 20px;
     width: 100px;
     height: 100px;
@@ -80,14 +76,21 @@
     background-color: white;
 }
 
-.textarea-form {
+.textarea-form-up {
     border-radius: 5px;
     border: none;
     outline: none;
     padding: 20px;
     resize: none;
     width: 300px;
-    margin: 20px;
+    margin-bottom: 20px;
     font-size: 18px;
     color: #525252;
+}
+
+.buttons-up{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
