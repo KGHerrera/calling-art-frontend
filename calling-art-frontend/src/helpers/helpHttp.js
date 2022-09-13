@@ -1,7 +1,5 @@
 export const helpHttp = () => {
 
-  // Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjYwMTcxNzM5LCJpYXQiOjE2NjAxNzA4MzksImp0aSI6IjA2MDFkYjFjYmY4MTQ5ZGI4Njc3OTIzNDk0MjhiYWRjIiwidXNlcl9pZCI6MX0.POFbtum95ZxBHjEh3rNHOQIZMoU7LjzacVJGt-1lseU
-
   const customFetch = (endpoint, options) => {
     const defaultHeader = {
       accept: "application/json",

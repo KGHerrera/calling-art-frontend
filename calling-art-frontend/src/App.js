@@ -8,21 +8,24 @@ import SignUp from "./pages/SignUp";
 import User from "./pages/User";
 import Error404 from "./pages/Error404";
 import { AuthProvider } from "./context/AuthContext";
+import { CrudProvider } from "./context/CrudContext";
 
 function App() {
   return (
     <>
       <HashRouter>
         <AuthProvider>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/image" element={<Image />} />
-            <Route path="/imageup" element={<ImageForm />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<SignUp />} />
-            <Route path="/user" element={<User />} />
-            <Route path="*" element={<Error404 />} />
-          </Routes>
+          <CrudProvider>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/image/:id" element={<Image />} />
+              <Route path="/imageup" element={<ImageForm />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<SignUp />} />
+              <Route path="/user/:id" element={<User />} />
+              <Route path="*" element={<Error404 />} />
+            </Routes>
+          </CrudProvider>
         </AuthProvider>
       </HashRouter>
     </>

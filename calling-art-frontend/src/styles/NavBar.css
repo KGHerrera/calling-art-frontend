@@ -8,9 +8,10 @@
     height: 70px;
     width: 100%;
     font-size: 16px;
-    box-shadow: 0 0 20px #06080c77;
+    box-shadow: 0 0 20px #06080c00;
     position: sticky;
     top: 0;
+    z-index: 999;
 }
 
 .circle-logo {

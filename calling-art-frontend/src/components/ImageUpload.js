@@ -1,8 +1,8 @@
 import FooterForm from "./FooterForm";
 import "../styles/ImageUpload.css";
 import { useContext, useState } from "react";
-import { helpHttp } from "../helpers/helpHttp";
 import AuthContext from "../context/AuthContext";
+import CrudContext from "../context/CrudContext";
 
 const initialForm = {
   title: "",
@@ -11,43 +11,44 @@ const initialForm = {
   user: 0,
 };
 
+const initialCategory = {
+  ANIME: "",
+  VIDEOGAMES: "",
+  CARTOONS: "",
+  MUSIC: "",
+};
+
 export default function ImageUpload() {
   const [form, setForm] = useState(initialForm);
   const { user, authTokens } = useContext(AuthContext);
-
-  let api = helpHttp();
-
-  const endpoint = "https://callingartbackend.herokuapp.com/images/images/";
-
-  const createData = (data) => {
-    let options = {
-      body: data,
-      headers: {
-        "content-type": "application/json",
-        Authorization: "Bearer " + String(authTokens.access),
-      },
-    };
-    api.post(endpoint, options).then((res) => {
-      if (res.err) {
-        console.log("error al subir");
-      } else {
-        handleReset();
-      }
-    });
-  };
+  const { createDataImage } = useContext(CrudContext);
+  const [category, setCategory] = useState(initialCategory);
 
   const handleReset = () => setForm(initialForm);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    if (
+      !category.ANIME &&
+      !category.VIDEOGAMES &&
+      !category.CARTOONS &&
+      !category.MUSIC
+    ) {
+      console.log("no categorys")
+      return;
+    }
+
     if (!form.title || !form.description || !form.link) {
       //console.log("faltan");
       return;
     }
+
+    
     form.user = user.user_id;
 
-    createData(form);
+    createDataImage(form, "images/images/", String(authTokens.access));
+    handleReset();
   };
 
   const handleChange = (e) => {
@@ -55,6 +56,20 @@ export default function ImageUpload() {
       ...form,
       [e.target.name]: e.target.value,
     });
+  };
+
+  const handleSelect = (e) => {
+    if (e.target.checked) {
+      setCategory({
+        ...category,
+        [e.target.name]: e.target.name,
+      });
+    } else {
+      setCategory({
+        ...category,
+        [e.target.name]: "",
+      });
+    }
   };
 
   return (
@@ -95,23 +110,48 @@ export default function ImageUpload() {
           </div>
 
           <div className="check-box-ui">
-            <input type="checkbox" id="anime" className="checkbox-input" />
+            <input
+              type="checkbox"
+              id="anime"
+              className="checkbox-input"
+              name="ANIME"
+              onChange={handleSelect}
+            />
             <label htmlFor="anime" className="label-iu">
               ANIME
             </label>
-            <input type="checkbox" id="videogames" className="checkbox-input" />
+            <input
+              type="checkbox"
+              id="videogames"
+              className="checkbox-input"
+              name="VIDEOGAMES"
+              onChange={handleSelect}
+            />
             <label htmlFor="videogames" className="label-iu">
               VIDEOGAMES
             </label>
-            <input type="checkbox" id="cartoons" className="checkbox-input" />
+            <input
+              type="checkbox"
+              id="cartoons"
+              className="checkbox-input"
+              name="CARTOONS"
+              onChange={handleSelect}
+            />
             <label htmlFor="cartoons" className="label-iu">
               CARTOONS
             </label>
-            <input type="checkbox" id="music" className="checkbox-input" />
+            <input
+              type="checkbox"
+              id="music"
+              className="checkbox-input"
+              name="MUSIC"
+              onChange={handleSelect}
+            />
             <label htmlFor="music" className="label-iu">
               MUSIC
             </label>
           </div>
+
           <div
             className="image-preview-upload-iu"
             style={{ backgroundImage: `url('${form.link}')` }}

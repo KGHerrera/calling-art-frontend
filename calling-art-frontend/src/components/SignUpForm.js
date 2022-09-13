@@ -1,7 +1,7 @@
 import FooterForm from "./FooterForm";
 import "../styles/SignUpForm.css";
-import { useState } from "react";
-import { helpHttp } from "../helpers/helpHttp";
+import { useContext, useState } from "react";
+import CrudContext from "../context/CrudContext";
 
 const initialForm = {
   username: "",
@@ -12,26 +12,13 @@ const initialForm = {
 };
 
 export default function SignUpForm() {
+  const { createDataRegister } = useContext(CrudContext);
   const [form, setForm] = useState(initialForm);
   const [cPassword, setCPassword] = useState("");
-  let api = helpHttp();
-
-  const endpoint = "https://callingartbackend.herokuapp.com/accounts/register/";
 
   const handleReset = (e) => {
     setForm(initialForm);
     setCPassword("");
-  };
-
-  const createData = (data) => {
-    let options = {
-      body: data,
-      headers: { "content-type": "application/json" },
-    };
-    api.post(endpoint, options).then((res) => {
-      console.log(res);
-      handleReset();
-    });
   };
 
   const handleSubmit = (e) => {
@@ -54,7 +41,7 @@ export default function SignUpForm() {
       return;
     }
 
-    createData(form);
+    createDataRegister(form, "accounts/register/");
   };
 
   const handleChange = (e) => {
